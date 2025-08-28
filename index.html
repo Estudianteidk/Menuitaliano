@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Menú Desplegable</title>
+</head>
+<body>
+    <h1>Menú desplegable con 4 opciones</h1>
+    <select id="menu" onchange="abrirPagina()">
+        <option value="">-- Selecciona una opción --</option>
+        <option value="pagina1.html">Opción 1</option>
+        <option value="pagina2.html">Opción 2</option>
+        <option value="pagina3.html">Opción 3</option>
+        <option value="pagina4.html">Opción 4</option>
+    </select>
+
+    <script>
+        function abrirPagina() {
+            const select = document.getElementById('menu');
+            const url = select.value;
+            if (url) {
+                window.location.href = url;
+            }
+        }
+    </script>
+</body>
+</html>

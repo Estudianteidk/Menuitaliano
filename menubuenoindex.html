@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>La Tavola Italiana - Restaurante Italiano</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fffaf3;
+            margin: 0;
+            padding: 0;
+            color: #3e2723;
+        }
+
+        header {
+            background-color: #b71c1c;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 42px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        /* Botón para el formulario */
+        .btn-formulario {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 28px;
+            background-color: #d84315;
+            color: white;
+            font-weight: 600;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-formulario:hover {
+            background-color: #b71c1c;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #b71c1c;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 32px;
+        }
+
+        .item {
+            background-color: #fbe9e7;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .item img {
+            width: 100%;
+            max-width: 700px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        /* Primera imagen: al pasar el mouse duplica tamaño */
+        .first-img:hover {
+            transform: scale(2);
+            z-index: 10;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        /* Todas las demás imágenes al pasar el mouse solo escalan 1.02 (como antes) */
+        .item img:not(.first-img):hover {
+            transform: scale(1.02);
+        }
+
+        .item h3 {
+            font-size: 26px;
+            color: #d84315;
+            margin-bottom: 10px;
+        }
+
+        .item p {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: center;
+            max-width: 800px;
+        }
+
+        footer {
+            background-color: #b71c1c;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive: desactivar efecto zoom grande en móviles */
+        @media (max-width: 768px) {
+            .first-img:hover {
+                transform: none;
+                position: static;
+                z-index: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>La Tavola Italiana</h1>
+        <p>Auténtica cocina italiana en el corazón de tu ciudad</p>
+        <a href="Formulario.html" class="btn-formulario">Reserva tu mesa</a>
+    </header>
+
+    <section>
+        <h2>🍝 Platillos Típicos</h2>
+
+        <div class="item">
+            <img class="first-img" src="italy.jpg" alt="Spaghetti a la Bolognesa">
+            <h3>Spaghetti a la Bolognesa</h3>
+            <p>Clásica pasta italiana con salsa de carne, tomate, vino y especias tradicionales. Servido con queso parmesano rallado.</p>
+        </div>
+
+        <div class="item">
+            <img src="https://cdn.pixabay.com/photo/2014/10/23/18/05/lasagna-500344_1280.jpg" alt="Lasaña Tradicional">
+            <h3>Lasaña Tradicional</h3>
+            <p>Capas de pasta, carne molida, salsa bechamel y queso mozzarella gratinado. Un clásico imperdible.</p>
+        </div>
+
+        <div class="item">
+            <img src="R.jpg" alt="Pizza Margherita">
+            <h3>Pizza Margherita</h3>
+            <p>Base de masa artesanal, salsa de tomate, mozzarella fresca y hojas de albahaca. Sencilla y deliciosa.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>🍷 Bebidas</h2>
+
+        <div class="item">
+            <img src="rest.jpg" alt="Vino Tinto Italiano">
+            <h3>Vino Tinto de la Casa</h3>
+            <p>Selección de vinos tintos italianos de la Toscana. Ideal para acompañar carnes y pastas.</p>
+        </div>
+
+        <div class="item">
+            <img src="https://cdn.pixabay.com/photo/2016/06/15/16/29/drink-1455859_1280.jpg" alt="Limoncello">
+            <h3>Limoncello</h3>
+            <p>Licor tradicional italiano hecho con limones frescos del sur de Italia. Perfecto como digestivo.</p>
+        </div>
+
+        <div class="item">
+            <img src="https://cdn.pixabay.com/photo/2021/07/08/14/26/coffee-6395933_1280.jpg" alt="Café Espresso">
+            <h3>Café Espresso</h3>
+            <p>El clásico espresso italiano, fuerte y aromático, servido en taza pequeña. Ideal para después del almuerzo.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>🍰 Postres</h2>
+
+        <div class="item">
+            <img src="https://cdn.pixabay.com/photo/2017/02/15/10/39/tiramisu-2066091_1280.jpg" alt="Tiramisú">
+            <h3>Tiramisú</h3>
+            <p>El postre italiano por excelencia: capas de bizcocho empapado en café, crema de mascarpone y cacao espolvoreado.</p>
+        </div>
+
+        <div class="item">
+            <img src="https://cdn.pixabay.com/photo/2020/09/23/10/26/panna-cotta-5596277_1280.jpg" alt="Panna Cotta">
+            <h3>Panna Cotta</h3>
+            <p>Delicado postre de crema cocida servido con salsa de frutos rojos. Suave, elegante y delicioso.</p>
+        </div>
+
+        <div class="item">
+            <img src="https://cdn.pixabay.com/photo/2022/01/25/15/17/gelato-6966157_1280.jpg" alt="Gelato Italiano">
+            <h3>Gelato Artesanal</h3>
+            <p>Helado tradicional italiano, disponible en sabores como pistacho, avellana, chocolate y vainilla.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>📍 Visítanos o síguenos en <a href="https://www.instagram.com" target="_blank">Instagram</a> | 📧 Contacto: <a href="mailto:reservas@latavolaitaliana.com">reservas@latavolaitaliana.com</a></p>
+    </footer>
+
+    <script>
+      // Código para que al pasar el mouse sobre la cuarta imagen haga scroll al final
+      document.addEventListener("DOMContentLoaded", function() {
+          const imgs = document.querySelectorAll('.item img');
+          if(imgs.length > 3) {
+              const fourthImg = imgs[3];
+              fourthImg.style.cursor = 'pointer';
+              fourthImg.addEventListener('mouseenter', function() {
+                  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+              });
+          }
+      });
+    </script>
+
+</body>
+</html>

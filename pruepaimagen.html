@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Galería de Imágenes</title>
+    <style>
+        img {
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <h1>Galería de Imágenes</h1>
+
+    <!-- Imagen 1 con efecto aleatorio -->
+    <img id="imagen1" src="italy.jpg" alt="Imagen 1" width="300">
+
+    <!-- Imagen 2 con efecto duplicar tamaño -->
+    <img id="imagen2" src="rest.jpg" alt="Imagen 2" width="300">
+
+    <!-- Imagen 3 -->
+    <img src="R.jpg" alt="Imagen 3" width="300">
+
+    <script>
+        const imagen1 = document.getElementById("imagen1");
+        const imagen2 = document.getElementById("imagen2");
+
+        // Imagen 1 - tamaño aleatorio
+        imagen1.addEventListener("mouseover", () => {
+            const ancho = Math.floor(Math.random() * (500 - 200 + 1)) + 200;
+            imagen1.style.width = ancho + "px";
+        });
+
+        imagen1.addEventListener("mouseout", () => {
+            imagen1.style.width = "300px";
+        });
+
+        // Imagen 2 - duplica tamaño al pasar mouse
+        imagen2.addEventListener("mouseover", () => {
+            imagen2.style.width = "600px"; // 300px x 2 = 600px
+        });
+
+        imagen2.addEventListener("mouseout", () => {
+            imagen2.style.width = "300px";
+        });
+    </script>
+</body>
+</html>
